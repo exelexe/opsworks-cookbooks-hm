@@ -1,0 +1,27 @@
+{
+    // params
+    "tz" : "Asia/Tokyo",
+    "nginx": {
+        "server_name": "h-miyamo.io"
+    },
+    "tomcat": {
+        "base_version" : 7
+    },
+    "opsworks": {
+        "ruby_version": "2.1",
+        "opsworks_rubygems": {
+            "version": "2.1.7"
+        },
+        "opsworks_bundler": {
+            "version": "1.5.1"
+        }
+    },
+
+    // run recipes
+    "run_list": [
+        //"recipe[timezone]",
+        "recipe[nginx]",
+        "recipe[ruby]",
+        "recipe[opsworks_java::setup]"
+    ]
+}
