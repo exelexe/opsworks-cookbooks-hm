@@ -5,3 +5,6 @@
 # "opsworks_commons/attributes/customize.rb" in your cookbook repository and
 # put the overrides in YOUR customize.rb file.
 ###
+default[:opsworks_commons][:assets_url] = 'http://production.cf.rubygems.org/rubygems'
+
+default[:ruby][:executable] = '/usr/bin/ruby'
