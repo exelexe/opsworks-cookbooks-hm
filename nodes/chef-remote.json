@@ -4,6 +4,9 @@
     "nginx": {
         "server_name": "h-miyamo.io"
     },
+    "rails": {
+        "max_pool_size": 2
+    },
     "opsworks": {
         "ruby_version": "2.1",
         "ruby_stack": "ruby",
@@ -16,7 +19,7 @@
     },
     "opsworks_bundler": {
         "version": "1.5.1",
-        "manage_package": false
+        "manage_package": true
     },
 
 
@@ -27,7 +30,8 @@
         //"recipe[chef-td-agent]",
         "recipe[nginx]",
         "recipe[opsworks_java::setup]",
-        "recipe[ruby]"
-        //"recipe[unicorn]"
+        "recipe[ruby]",
+        "recipe[rails::configure]",
+        "recipe[unicorn]"
     ]
 }
