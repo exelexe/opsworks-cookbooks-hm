@@ -4,24 +4,30 @@
     "nginx": {
         "server_name": "h-miyamo.io"
     },
-    "tomcat": {
-        "base_version" : 7
-    },
     "opsworks": {
         "ruby_version": "2.1",
-        "opsworks_rubygems": {
-            "version": "2.1.7"
-        },
-        "opsworks_bundler": {
-            "version": "1.5.1"
+        "ruby_stack": "ruby",
+        "rails_stack": {
+          "name": "apache_passenger"
         }
     },
+    "opsworks_rubygems": {
+        "version": "2.2.1"
+    },
+    "opsworks_bundler": {
+        "version": "1.5.1",
+        "manage_package": false
+    },
+
 
     // run recipes
     "run_list": [
+        "recipe[pkg-mng]",
         //"recipe[timezone]",
+        //"recipe[chef-td-agent]",
         "recipe[nginx]",
-        "recipe[ruby]",
-        "recipe[opsworks_java::setup]"
+        "recipe[opsworks_java::setup]",
+        "recipe[ruby]"
+        //"recipe[unicorn]"
     ]
 }
