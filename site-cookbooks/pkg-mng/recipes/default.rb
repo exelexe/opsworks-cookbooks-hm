@@ -7,7 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 # Need to update package in order to install the Ruby2.1 
-# After the update completes, installation of ruby will start.
 
 case node['platform']
 when 'debian','ubuntu'
@@ -27,5 +26,3 @@ when 'debian','ubuntu'
 when 'centos','redhat','fedora','amazon'
   # TODO 
 end  
-
-#include_recipe 'ruby'
