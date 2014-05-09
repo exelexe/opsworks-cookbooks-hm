@@ -11,7 +11,7 @@
         "ruby_version": "2.1",
         "ruby_stack": "ruby",
         "rails_stack": {
-          "name": "apache_passenger"
+          "name": "nginx_unicorn"
         }
     },
     "opsworks_rubygems": {
@@ -21,17 +21,26 @@
         "version": "1.5.1",
         "manage_package": true
     },
+    "td_agent": {
+        "api_key": "api_key"
+        //"plugins": [
+        //    "fluent-plugin-forest",
+        //    "fluent-mixin-plaintextformatter",
+        //    "fluent-plugin-config-expander",
+        //    "fluent-plugin-file-alternative"
+        //]
+    },
 
 
     // run recipes
     "run_list": [
-        "recipe[pkg-mng]",
+        //"recipe[pkg-mng]",
         //"recipe[timezone]",
-        //"recipe[chef-td-agent]",
-        "recipe[nginx]",
-        "recipe[opsworks_java::setup]",
-        "recipe[ruby]",
-        "recipe[rails::configure]",
-        "recipe[unicorn]"
+        //"recipe[nginx]",
+        //"recipe[opsworks_java::setup]",
+        //"recipe[ruby]",
+        //"recipe[rails::configure]",
+        //"recipe[unicorn]",
+        "recipe[chef-td-agent]"
     ]
 }
