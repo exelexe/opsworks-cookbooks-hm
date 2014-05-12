@@ -1,0 +1,9 @@
+{
+  "id": "api-keys",
+  "treasure-data": {
+    "version": 1,
+    "iv": "EG2t7774zc5Yilnd0UZCVQ==\n",
+    "encrypted_data": "Nm+2b8iNV2VBpt9TeugKjDXMfDqf3zkSm9iuzMYq/hSPkBJ3zgXsFYfMMi2J\n9kbZxS9jqCEJgHnz2uc9oBIf4dbqFCaPWPGD7A9aUUr+y6U=\n",
+    "cipher": "aes-256-cbc"
+  }
+}

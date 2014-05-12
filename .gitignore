@@ -1,2 +1,3 @@
+/data_bag_key/secret_key
 /cookbooks/
 /nodes/chef-remote.json
