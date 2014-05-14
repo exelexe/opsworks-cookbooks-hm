@@ -1,0 +1,18 @@
+{
+    "name": "development",
+    "json_class": "Chef::Environment",
+    "chef_type": "environment",
+    "default_attributes": {
+        "nginx": {
+            "server_name": "dev.h-miyamo.io"
+        },
+        "rails": {
+            "max_pool_size": 2
+        }
+    },
+    "override_attributes": {}
+}
+
+
+
+

@@ -1,0 +1,14 @@
+{
+    "name": "staging",
+    "json_class": "Chef::Environment",
+    "chef_type": "environment",
+    "default_attributes": {
+        "nginx": {
+            "server_name": "stg.h-miyamo.io"
+        },
+        "rails": {
+            "max_pool_size": 4
+        }
+    },
+    "override_attributes": {}
+}

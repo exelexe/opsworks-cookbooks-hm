@@ -1,0 +1,40 @@
+{
+    // params
+    "environment": "development",
+    "tz" : "Asia/Tokyo",
+    "opsworks": {
+        "ruby_version": "2.1",
+        "ruby_stack": "ruby",
+        "rails_stack": {
+          "name": "nginx_unicorn"
+        }
+    },
+    "opsworks_rubygems": {
+        "version": "2.2.1"
+    },
+    "opsworks_bundler": {
+        "version": "1.5.1",
+        "manage_package": true
+    },
+    "td_agent": {
+        //"plugins": [
+        //    "fluent-plugin-forest",
+        //    "fluent-mixin-plaintextformatter",
+        //    "fluent-plugin-config-expander",
+        //    "fluent-plugin-file-alternative"
+        //]
+    },
+
+
+    // run recipes
+    "run_list": [
+        //"recipe[pkg-mng]",
+        //"recipe[timezone]",
+        "recipe[nginx]",
+        //"recipe[opsworks_java::setup]",
+        //"recipe[ruby]",
+        //"recipe[rails::configure]",
+        //"recipe[unicorn]",
+        "recipe[chef-td-agent]"
+    ]
+}
