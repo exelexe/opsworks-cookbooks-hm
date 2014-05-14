@@ -25,11 +25,10 @@
         //]
     },
 
-
     // run recipes
     "run_list": [
         //"recipe[pkg-mng]",
-        //"recipe[timezone]",
+        "recipe[timezone-ii]",
         "recipe[nginx]",
         //"recipe[opsworks_java::setup]",
         //"recipe[ruby]",
