@@ -57,20 +57,25 @@ template "nginx.conf" do
   mode 0644
 end
 
-=begin
+
 template "#{node[:nginx][:dir]}/sites-available/default" do
   source "default-site.erb"
   owner "root"
   group "root"
   mode 0644
 end
-=end
 
-template "#{node[:nginx][:dir]}/sites-available/adf.erb" do
+template "#{node[:nginx][:dir]}/sites-available/adf" do
   source "adf.erb"
   owner "root"
   group "root"
   mode 0644
+end
+
+# call definition
+nginx_web_app "adf" do
+  template "adf.erb"
+  ssl false
 end
 
 include_recipe "nginx::service"
