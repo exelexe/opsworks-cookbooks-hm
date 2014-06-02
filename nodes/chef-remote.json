@@ -17,12 +17,12 @@
         "manage_package": true
     },
     "td_agent": {
-        //"plugins": [
+        "plugins": [
         //    "fluent-plugin-forest",
-        //    "fluent-mixin-plaintextformatter",
+        //    "plaintextformatter"
         //    "fluent-plugin-config-expander",
         //    "fluent-plugin-file-alternative"
-        //]
+        ]
     },
 
     // run recipes

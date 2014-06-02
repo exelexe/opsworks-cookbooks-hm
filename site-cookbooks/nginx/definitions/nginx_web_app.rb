@@ -85,4 +85,12 @@ define :nginx_web_app, :template => "site.erb", :enable => true do
       only_if do File.symlink?("#{node[:nginx][:dir]}/sites-enabled/#{application_name}") end
     end
   end
+
+  # chmod g+rx {access-log}
+  #file "#{node[:nginx][:log_dir]}/#{application_name}" do
+  #  owner node[:nginx][:user]
+  #  group node[:nginx][:user]
+  #  mode "0755"
+  #  action :create
+  #end
 end

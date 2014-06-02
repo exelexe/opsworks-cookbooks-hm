@@ -1,9 +1,21 @@
 {
-  "id": "api-keys",
+  "aws-secret-key": {
+    "version": 1,
+    "iv": "Y5YXzYbP1i4uKB4+FyezNg==\n",
+    "encrypted_data": "lBY7J2ajWNbhj3S1oWGGhFYKsHsHnNsSxH1Fft121gkHRI5bM06v+kICIznY\nPsNygKZ4iDM3ZQ4Yo7CbuNUzEg==\n",
+    "cipher": "aes-256-cbc"
+  },
   "treasure-data": {
     "version": 1,
-    "iv": "EG2t7774zc5Yilnd0UZCVQ==\n",
-    "encrypted_data": "Nm+2b8iNV2VBpt9TeugKjDXMfDqf3zkSm9iuzMYq/hSPkBJ3zgXsFYfMMi2J\n9kbZxS9jqCEJgHnz2uc9oBIf4dbqFCaPWPGD7A9aUUr+y6U=\n",
+    "iv": "Aq0q6U71j6mxsgSS5WIOyQ==\n",
+    "encrypted_data": "MzDTkefCV4SQjAHfuBXIjsEpyidNiqeiMuqTstC9Ho3NqOI72vU4JsjvpQrv\na6G3tFoJT+M+1JhbzwBABQZjqx6Q2IJO2VgXwYscbcrwLA4=\n",
+    "cipher": "aes-256-cbc"
+  },
+  "id": "api-keys",
+  "aws-access-key": {
+    "version": 1,
+    "iv": "1bPZea41vlprrFeUCARscg==\n",
+    "encrypted_data": "349bHaSq3UfmAceMRcVwJlyuZgjIV6IvXxqrIocnanXkwIVE2ekA6zaurVDC\nfiu8\n",
     "cipher": "aes-256-cbc"
   }
 }

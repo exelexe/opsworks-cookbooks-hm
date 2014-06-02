@@ -4,7 +4,7 @@
     "chef_type": "environment",
     "default_attributes": {
         "nginx": {
-            "server_name": "dev.h-miyamo.io"
+            "server_name": "chef-remote"
         },
         "rails": {
             "max_pool_size": 2
