@@ -44,8 +44,7 @@ include conf.d/*.conf
   path /var/log/nginx/access.log
   pos_file /var/log/td-agent/nginx-access.log.pos
   tag nginx-access.log
-  #format apache
-  format /^(?<host>[^ ]*) [^ ]* (?<user>[^ ]*) \[(?<time>[^\]]*)\] "(?<method>\S+)(?: +(?<path>[^ ]*) +\S*)?" (?<code>[^ ]*) (?<size>[^ ]*)(?: "(?<referer>[^\"]*)" "(?<agent>[^\"]*)" (?<response>[^ ]*))?$/
+  format apache
   time_format %d/%b/%Y:%H:%M:%S %z
 </source>
 
@@ -82,10 +81,7 @@ include conf.d/*.conf
   s3_bucket zzz-miyamo
   s3_endpoint s3-ap-northeast-1.amazonaws.com
 
-  # proxy_uri http://infra-vip-bk.serv.netmile.lan:8080
-
   buffer_path /var/log/td-agent/buffer/s3
-  #buffer_path /var/log/td-agent/buffer/nginx
   buffer_chunk_limit 8m
   buffer_queue_limit 512
   flush_interval 10s
@@ -96,12 +92,6 @@ include conf.d/*.conf
   #time_slice_wait 3m
   localtime
 
-  store_as txt
-  #output_include_time false
-  #output_include_tag false
-  #output_data_type attr:log
-
-  #include_tag_key false
-  #include_time_key false
-
+  store_as json
+  format_json true
 </match>
