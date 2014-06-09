@@ -6,37 +6,9 @@ include conf.d/*.conf
 ## Output descriptions:
 ##
 
-# Treasure Data (http://www.treasure-data.com/) provides cloud based data
-# analytics platform, which easily stores and processes data from td-agent.
-# FREE plan is also provided.
-# @see http://docs.fluentd.org/articles/http-to-td
-#
-# This section matches events whose tag is td.DATABASE.TABLE
-
-#<match td.*.*>
-#  type tdlog
-#  apikey <%= node['td_agent']['treasure_data'] %>
-#
-#  auto_create_table
-#  buffer_type file
-#  buffer_path /var/log/td-agent/buffer/td
-#</match>
-
-## match tag=debug.** and dump to console
-<match debug.**>
-  type stdout
-</match>
-
 ####
 ## Source descriptions:
 ##
-
-## built-in TCP input
-## @see http://docs.fluentd.org/articles/in_forward
-<source>
-  type forward
-  port 24224
-</source>
 
 ## nginx acsesslog
 <source>
@@ -44,32 +16,9 @@ include conf.d/*.conf
   path /var/log/nginx/access.log
   pos_file /var/log/td-agent/nginx-access.log.pos
   tag nginx-access.log
-  format apache
+  format nginx
   time_format %d/%b/%Y:%H:%M:%S %z
 </source>
-
-
-## built-in UNIX socket input
-#<source>
-#  type unix
-#</source>
-
-# HTTP input
-# POST http://localhost:8888/<tag>?json=<json>
-# POST http://localhost:8888/td.myapp.login?json={"user"%3A"me"}
-# @see http://docs.fluentd.org/articles/in_http
-<source>
-  type http
-  port 8888
-</source>
-
-## live debugging agent
-<source>
-  type debug_agent
-  bind 127.0.0.1
-  port 24230
-</source>
-<% end %>
 
 # forward ngix access log
 <match nginx-access.log>
@@ -79,6 +28,7 @@ include conf.d/*.conf
   aws_sec_key <%= node['td_agent']['aws_secret_key'] %>
 
   s3_bucket zzz-miyamo
+  #s3_bucket <%= node['td_agent']['nginx_s3_bucket'] %>
   s3_endpoint s3-ap-northeast-1.amazonaws.com
 
   buffer_path /var/log/td-agent/buffer/s3
@@ -89,9 +39,13 @@ include conf.d/*.conf
 
   path pig/input/
   time_slice_format %Y/%m/%d/%H/%{hostname}-nginx-%Y%m%dT%H.%M
-  #time_slice_wait 3m
   localtime
 
   store_as json
   format_json true
+  include_time_key true
+  time_key log_time
 </match>
+
+
+<% end %>

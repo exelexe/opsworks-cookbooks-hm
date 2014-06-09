@@ -29,7 +29,7 @@
     "run_list": [
         //"recipe[pkg-mng]",
         "recipe[timezone-ii]",
-        "recipe[nginx]",
+        //"recipe[nginx]",
         //"recipe[opsworks_java::setup]",
         //"recipe[ruby]",
         //"recipe[rails::configure]",

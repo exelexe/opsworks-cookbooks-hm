@@ -11,6 +11,13 @@ group 'td-agent' do
   action     [:create]
 end
 
+# usermod
+group 'adm' do
+  action  :modify
+  members 'td-agent'
+  append  true
+end
+
 user 'td-agent' do
   comment  'td-agent'
   uid      403
