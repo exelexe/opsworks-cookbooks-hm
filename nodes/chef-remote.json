@@ -34,6 +34,7 @@
         //"recipe[ruby]",
         //"recipe[rails::configure]",
         //"recipe[unicorn]",
-        "recipe[chef-td-agent]"
+        "recipe[chef-td-agent]",
+        "recipe[newrelic::java-agent]"
     ]
 }

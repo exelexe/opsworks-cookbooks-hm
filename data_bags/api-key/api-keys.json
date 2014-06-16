@@ -1,21 +1,27 @@
 {
   "aws-secret-key": {
+    "encrypted_data": "gZh5AMPIvUPwobuTIMm2YmI9KaaDjNn4Bjk8QUkuQ4BsCKELP74OnlvOJWx3\ngQ7UKdWUY8LRMdPgnS39kJ9znA==\n",
     "version": 1,
-    "iv": "Y5YXzYbP1i4uKB4+FyezNg==\n",
-    "encrypted_data": "lBY7J2ajWNbhj3S1oWGGhFYKsHsHnNsSxH1Fft121gkHRI5bM06v+kICIznY\nPsNygKZ4iDM3ZQ4Yo7CbuNUzEg==\n",
-    "cipher": "aes-256-cbc"
+    "cipher": "aes-256-cbc",
+    "iv": "DCPT6Bgtc4oKnR317LqQ1Q==\n"
   },
   "treasure-data": {
+    "encrypted_data": "IisNtQwUTtGLd98UwN4DSywexSwwJZdV3CmhegAdpBekW53HEs3y3qOaigOi\nTQ/XBIoMciGJ8FMkg125M7K8icSJCMXH0E8pufUetsZRXbw=\n",
     "version": 1,
-    "iv": "Aq0q6U71j6mxsgSS5WIOyQ==\n",
-    "encrypted_data": "MzDTkefCV4SQjAHfuBXIjsEpyidNiqeiMuqTstC9Ho3NqOI72vU4JsjvpQrv\na6G3tFoJT+M+1JhbzwBABQZjqx6Q2IJO2VgXwYscbcrwLA4=\n",
-    "cipher": "aes-256-cbc"
+    "cipher": "aes-256-cbc",
+    "iv": "yl+dh0i+F2+KnSkjw9azAw==\n"
   },
-  "id": "api-keys",
-  "aws-access-key": {
+  "newrelic-license": {
+    "encrypted_data": "ZcyAwnrxXIxlu+Y3cx0bVi2aO0TsgKz4RDs674skJ8frbwzVT/nRgbYmOzht\npELQyLOLQ350r0iN3IHCngE0Dw==\n",
     "version": 1,
-    "iv": "1bPZea41vlprrFeUCARscg==\n",
-    "encrypted_data": "349bHaSq3UfmAceMRcVwJlyuZgjIV6IvXxqrIocnanXkwIVE2ekA6zaurVDC\nfiu8\n",
-    "cipher": "aes-256-cbc"
-  }
+    "cipher": "aes-256-cbc",
+    "iv": "aTaeSmH4G6L4Y2xMnLy5tQ==\n"
+  },
+  "aws-access-key": {
+    "encrypted_data": "DZ6hWpJxucsiCIVwzlCC3L6Yf2RStj3Ya7uV+tsUUShHDyBii1tRVJzSofoM\njoLD\n",
+    "version": 1,
+    "cipher": "aes-256-cbc",
+    "iv": "qD4umM6q47XPpQioDB8ANg==\n"
+  },
+  "id": "api-keys"
 }
